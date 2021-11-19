@@ -13,17 +13,11 @@
         <td>Amount</td>
         <td>Description</td>
     </tr>
-<!--    <tr>-->
-<!--        <td th:text="*{product.getProductId()}"></td>-->
-<!--        <td th:text="*{product.getProductName()}"></td>-->
-<!--        <td th:text="*{product.getProductAmount()}"></td>-->
-<!--        <td th:text="*{product.getDescription()}"></td>-->
-<!--    </tr>-->
-    <tr>
-        <td th:text="*{productId}"></td>
-        <td th:text="*{productName}"></td>
-        <td th:text="*{productAmount}"></td>
-        <td th:text="*{description}"></td>
+    <tr th:each="product : ${productList} ">
+        <td th:text="${product.productId}"></td>
+        <td th:text="${product.productName}"></td>
+        <td th:text="${product.productAmount}"></td>
+        <td th:text="${product.description}"></td>
     </tr>
 </table>
 </body>
