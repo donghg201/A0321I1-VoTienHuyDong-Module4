@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 @RequestMapping("employee/")
 public class EmployeeController {
-    @RequestMapping(value = "showform", method = RequestMethod.GET)
+    @RequestMapping(value = "/showform", method = RequestMethod.GET)
     public String showForm(ModelMap model) {
         model.addAttribute("employee", new Employee());
         return "employee/create";

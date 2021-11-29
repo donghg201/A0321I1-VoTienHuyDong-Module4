@@ -2,12 +2,13 @@ package com.codegym.orm.service;
 
 import com.codegym.orm.model.Customer;
 import com.codegym.orm.repository.CustomerRepository;
-import com.codegym.orm.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class CustomerServiecImpl implements CustomerService{
+@Service
+public class CustomerServiecImpl implements CustomerService {
 
     @Autowired
     private CustomerRepository customerRepository;

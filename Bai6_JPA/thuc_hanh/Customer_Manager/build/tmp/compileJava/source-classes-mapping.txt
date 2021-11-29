@@ -1,5 +1,5 @@
-com/codegym/orm/service/CustomerServiecImpl.java
- com.codegym.orm.service.CustomerServiecImpl
+com/codegym/orm/service/ApplicationInitializer.java
+ com.codegym.orm.service.ApplicationInitializer
 com/codegym/orm/model/Customer.java
  com.codegym.orm.model.Customer
 com/codegym/orm/controller/CustomerController.java
@@ -14,5 +14,5 @@ com/codegym/orm/repository/Repository.java
  com.codegym.orm.repository.Repository
 com/codegym/orm/service/ApplicationConfig.java
  com.codegym.orm.service.ApplicationConfig
-com/codegym/orm/service/ApplicationInitializer.java
- com.codegym.orm.service.ApplicationInitializer
+com/codegym/orm/service/CustomerServiecImpl.java
+ com.codegym.orm.service.CustomerServiecImpl
