@@ -24,8 +24,8 @@
             <td>
                 <select th:field="*{topic}">
                     <option value=""></option>
-                    <option th:each="topic : ${topicList}"
-                            th:value="${topic}" th:text="${topic}"></option>
+                    <option th:each="topic : ${topics}"
+                            th:value="${topic.id}" th:text="${topic.topic}"></option>
                 </select>
             </td>
         </tr>

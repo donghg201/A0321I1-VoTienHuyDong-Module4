@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="82d7a336-3b0e-40dc-ad9d-6fe8cfc56c94" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Blog_version2/src/main/java/com/codegym/orm/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog_version2/src/main/java/com/codegym/orm/model/Blog1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog_version2/src/main/java/com/codegym/orm/model/Topic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blog_version2/src/main/java/com/codegym/orm/repository/BlogRepo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/controller/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/controller/BlogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/form/BlogForm.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/initial/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/initial/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/model/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/model/Blog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/repository/BlogRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/repository/BlogRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/repository/BlogRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/service/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/service/BlogService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/service/BlogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/build/classes/java/main/com/codegym/orm/service/BlogServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/libs/Blog_ver2-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/build/libs/Blog_ver2-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/form/BlogForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/initial/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/initial/ApplicationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/model/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/model/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/repository/BlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/repository/BlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/repository/BlogRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/service/BlogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/java/com/codegym/orm/service/BlogServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/webapp/WEB-INF/views/blog/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/src/main/webapp/WEB-INF/views/blog/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/webapp/WEB-INF/views/blog/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/src/main/webapp/WEB-INF/views/blog/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blog_ver2/src/main/webapp/WEB-INF/views/blog/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/Blog_ver2/src/main/webapp/WEB-INF/views/blog/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/6.8/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/build/classes/java/main/com/codegym/orm/model/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/build/classes/java/main/com/codegym/orm/model/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/build/classes/java/main/com/codegym/orm/service/CustomerServiecImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/build/classes/java/main/com/codegym/orm/service/CustomerServiecImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/build/libs/Customer_Manager_1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/build/libs/Customer_Manager_1-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/src/main/java/com/codegym/orm/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/src/main/java/com/codegym/orm/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/src/main/java/com/codegym/orm/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/src/main/java/com/codegym/orm/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/src/main/java/com/codegym/orm/service/CustomerServiecImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh/Customer_Manager_1/src/main/java/com/codegym/orm/service/CustomerServiecImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="21lONegTfGGa8akv7Np5a2zyRyY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Blog_version2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="82d7a336-3b0e-40dc-ad9d-6fe8cfc56c94" name="Changes" comment="" />
+      <created>1638512171807</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638512171807</updated>
+      <workItem from="1638512171921" duration="11000" />
+      <workItem from="1638512220296" duration="11000" />
+    </task>
+    <servers />
+  </component>
+</project>

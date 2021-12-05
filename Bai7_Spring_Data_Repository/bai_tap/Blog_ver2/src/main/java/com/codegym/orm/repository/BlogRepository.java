@@ -1,13 +1,12 @@
 package com.codegym.orm.repository;
 
 import com.codegym.orm.model.Blog;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import javax.transaction.Transactional;
 
-public interface BlogRepository {
-    Blog getBlogById(Long id);
-    List<Blog> getList();
-    void save(Blog blog);
-    void update(Blog blog);
-    void delete(Long id);
+@Repository
+@Transactional
+public interface BlogRepository extends JpaRepository<Blog, Long> {
 }

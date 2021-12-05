@@ -11,7 +11,6 @@
     <tr>
         <th>Blog number</th>
         <th>Title</th>
-        <th>Topic</th>
         <th>Content</th>
         <th>Edit</th>
         <th>Delete</th>
@@ -20,7 +19,6 @@
         <tr>
             <td th:text="${blog.id}"></td>
             <td th:text="${blog.title}"></td>
-            <td th:text="${blog.topic}"></td>
             <td th:text="${blog.content}"></td>
             <td><a th:href="@{/edit-blog/__${blog.id}__ }">Edit</a></td>
             <td><a th:href="@{/delete-blog/__${blog.id}__ }">Delete</a></td>

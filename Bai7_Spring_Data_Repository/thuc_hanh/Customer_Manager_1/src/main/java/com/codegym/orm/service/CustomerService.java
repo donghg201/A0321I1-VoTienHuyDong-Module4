@@ -3,8 +3,6 @@ package com.codegym.orm.service;
 import com.codegym.orm.model.Customer;
 import com.codegym.orm.model.Province;
 
-import java.util.List;
-
 public interface CustomerService {
     Iterable<Customer> findAll();
 

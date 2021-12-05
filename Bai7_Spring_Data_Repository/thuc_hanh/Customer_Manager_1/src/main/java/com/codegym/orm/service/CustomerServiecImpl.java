@@ -6,8 +6,6 @@ import com.codegym.orm.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class CustomerServiecImpl implements CustomerService {
 
