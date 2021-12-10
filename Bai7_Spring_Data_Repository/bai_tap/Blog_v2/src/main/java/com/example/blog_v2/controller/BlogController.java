@@ -10,14 +10,12 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Optional;
 
 @Controller
+@RequestMapping("/blog")
 public class BlogController {
     @Autowired
     BlogService blogService;
@@ -28,7 +26,7 @@ public class BlogController {
     @Autowired
     BlogRepository blogRepository;
 
-    @GetMapping("")
+    @GetMapping("/list")
     public String showList(Model model, @PageableDefault(size = 3) Pageable pageable,
                            Optional<String> key_search,
                            Optional<Long> topicId) {
@@ -42,14 +40,14 @@ public class BlogController {
                 model.addAttribute("blogs", blogService.findAllBlog(pageable));
             }
         }
-        return "list";
+        return "/blog/list";
     }
 
     @GetMapping("/create")
     public String showCreateForm(Model model, @PageableDefault(size = 3) Pageable pageable) {
         model.addAttribute("blog", new Blog());
         model.addAttribute("topicList", topicRepository.findAll());
-        return "create";
+        return "/blog/create";
     }
 
     @PostMapping("/create")
@@ -57,7 +55,7 @@ public class BlogController {
         blogService.save(blog);
         model.addAttribute("blog", new Blog());
         model.addAttribute("message", "New blog created successfully");
-        return "create";
+        return "/blog/create";
     }
 
     @GetMapping("/edit-blog/{id}")
@@ -65,7 +63,7 @@ public class BlogController {
         Blog blog = blogService.getBlogById(id);
         model.addAttribute("topicList", topicRepository.findAll());
         model.addAttribute("blog", blog);
-        return "edit";
+        return "/blog/edit";
     }
 
     @PostMapping("/edit-blog")
@@ -73,19 +71,26 @@ public class BlogController {
         blogService.save(blog);
         model.addAttribute("blog", new Blog());
         model.addAttribute("message", "New blog created successfully");
-        return "edit";
+        return "/blog/edit";
     }
 
     @GetMapping("/delete-blog/{id}")
     public String showDeleteForm(@PathVariable Long id, Model model) {
         Blog blog = blogService.getBlogById(id);
         model.addAttribute("blog", blog);
-        return "delete";
+        return "/blog/delete";
     }
 
     @PostMapping("/delete-blog")
     public String deleteBlog(@ModelAttribute("customer") Blog blog) {
         blogRepository.deleteById(blog.getId());
-        return "redirect:";
+        return "redirect:/blog/list";
+    }
+
+    @GetMapping("/detail/{id}")
+    public String detailBlog(@PathVariable("id") Long id, Model model) {
+        Blog blog = blogService.getBlogById(id);
+        model.addAttribute("blog", blog);
+        return "/blog/detail";
     }
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Topic</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Create topic</h1>
+<p>
+    <a href="/topic/list">Topic list</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/topic/create}" th:object="${topic}" method="post">
+    <table>
+        <tr>
+            <td>Topic:</td>
+            <td><input type="text" th:field="*{topic}"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Create topic"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
