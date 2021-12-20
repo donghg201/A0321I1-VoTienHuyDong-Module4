@@ -1,12 +1,16 @@
-package com.example.blog_v2.controller;
+package com.example.blog_v3.controller;
 
-import com.example.blog_v2.model.Blog;
-import com.example.blog_v2.model.Topic;
-import com.example.blog_v2.repository.TopicRepository;
+import com.example.blog_v3.model.Blog;
+import com.example.blog_v3.model.Topic;
+import com.example.blog_v3.repository.TopicRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/topic")

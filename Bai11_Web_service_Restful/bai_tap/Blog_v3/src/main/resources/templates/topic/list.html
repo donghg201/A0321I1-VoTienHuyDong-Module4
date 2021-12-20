@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<a href="/topic/create">Create new topic</a>
+<table class="table">
+    <tr>
+        <th>Topic</th>
+        <th>Detail</th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr th:each="topic: ${topics}">
+        <td scope="col" th:text="${topic.topic}"></td>
+        <td><a th:href="@{/topic/detail/__${topic.id}__ }">Detail</a></td>
+        <td><a th:href="@{/topic/edit-topic/__${topic.id}__ }">Edit</a></td>
+        <td><a th:href="@{/topic/delete-topic/__${topic.id}__ }">Delete</a></td>
+    </tr>
+</table>
+</body>
+</html>

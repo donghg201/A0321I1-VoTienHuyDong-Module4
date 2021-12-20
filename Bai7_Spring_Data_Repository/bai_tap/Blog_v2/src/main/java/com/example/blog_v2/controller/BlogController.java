@@ -1,7 +1,6 @@
 package com.example.blog_v2.controller;
 
 import com.example.blog_v2.model.Blog;
-import com.example.blog_v2.model.Topic;
 import com.example.blog_v2.repository.BlogRepository;
 import com.example.blog_v2.repository.TopicRepository;
 import com.example.blog_v2.service.BlogService;

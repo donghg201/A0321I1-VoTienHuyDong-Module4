@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Detail blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<h1>Detail blog</h1>
+<p>
+    <a href="/blog/list">Blog list</a>
+</p>
+<form th:object="${blog}">
+    <div class="form-group">
+        <label for="Title">Title</label>
+        <input disabled th:field="*{title}" class="form-control" id="Title">
+    </div>
+    <div class="form-group">
+        <label for="topic">Topic</label>
+        <input disabled th:field="*{topic}" class="form-control" id="topic">
+    </div>
+    <div class="form-group">
+        <label for="content">Content</label>
+        <input disabled th:field="*{content}" class="form-control" id="content">
+    </div>
+    <button type="button" class="btn btn-success"><a href="/blog/list">Done</a></button>
+</form>
+</body>
+</html>
