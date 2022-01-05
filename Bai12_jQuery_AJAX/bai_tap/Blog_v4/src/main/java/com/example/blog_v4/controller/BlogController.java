@@ -7,14 +7,11 @@ import com.example.blog_v4.service.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import java.util.List;
 import java.util.Optional;
 
 
@@ -118,7 +115,7 @@ public class BlogController {
     }
 
     @PostMapping("/delete-blog")
-    public String deleteBlog(@ModelAttribute("customer") Blog blog) {
+    public String deleteBlog(@ModelAttribute("blog") Blog blog) {
         blogRepository.deleteById(blog.getId());
         return "redirect:/blog/list";
     }

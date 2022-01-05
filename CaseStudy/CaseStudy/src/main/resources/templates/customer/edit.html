@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit Customer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+<h1>Edit customer</h1>
+<p>
+    <a href="/customer/list">Customer list</a>
+</p>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form th:action="@{/customer/edit-customer}" th:object="${customer}" method="post">
+    <input th:type="hidden" name="id" th:field="*{customer_id}">
+    <table>
+        <tr>
+            <td>Customer Type:</td>
+            <td>
+                <select th:field="*{customerType}">
+                    <option selected disabled value="">Choose</option>
+                    <option th:each="customerType: ${customerTypeIdList}" th:value="${customerType.customer_type_id}"
+                            th:text="${customerType.customer_type_name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td><input type="text" th:field="*{customer_name}"/></td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td><input type="date" th:field="*{customer_birthday}"/></td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>
+                <select th:field="*{customer_gender}">
+                    <option selected disabled value="">Choose</option>
+                    <option th:value="1" th:text="Nữ"></option>
+                    <option th:value="0" th:text="Nam"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>ID card:</td>
+            <td><input type="text" th:field="*{customer_id_card}"/></td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td><input type="text" th:field="*{customer_phone}"/></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="email" th:field="*{customer_email}"/></td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td><input type="text" th:field="*{customer_address}"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Update blog"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="searchTable">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Customer type id</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Gender</th>
+            <th>Id card</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Detail</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr th:each="customer: ${customers}">
+            <td scope="col" th:text="${customer.customer_id}"></td>
+            <td scope="col" th:text="${customer.customerType.customer_type_name}"></td>
+            <td scope="col" th:text="${customer.customer_name}"></td>
+            <td scope="col" th:text="${customer.customer_birthday}"></td>
+            <td scope="col" th:text="${customer.customer_gender}"></td>
+            <td scope="col" th:text="${customer.customer_id_card}"></td>
+            <td scope="col" th:text="${customer.customer_phone}"></td>
+            <td scope="col" th:text="${customer.customer_email}"></td>
+            <td scope="col" th:text="${customer.customer_address}"></td>
+            <td><a th:href="@{/customer/detail/__${customer.customer_id}__ }">Detail</a></td>
+            <!--        <td>-->
+            <!--            <button class="btn btn-warning viewModal">View</button>-->
+            <!--            <input hidden th:value="${customer.customer_id}">-->
+            <!--        </td>-->
+            <td><a th:href="@{/customer/edit-customer/__${customer.customer_id}__ }">Edit</a></td>
+            <!--        <td>-->
+            <!--            <button type="button" class="btn btn-danger"-->
+            <!--                    th:onclick="'javascript:showEdit('+ ${customer.customer_id} + ')'">-->
+            <!--                Update-->
+            <!--            </button>-->
+            <!--            <input hidden th:value="${customer.customer_id}">-->
+            <!--        </td>-->
+            <!--        <td><a th:href="@{/blog/delete-blog/__${blog.id}__ }">Delete</a></td>-->
+            <td>
+                <button type="button" class="btn btn-danger" id="btnModalDelete"
+                        th:onclick="'javascript:actionDelete('+ ${customer.customer_id} + ')'">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

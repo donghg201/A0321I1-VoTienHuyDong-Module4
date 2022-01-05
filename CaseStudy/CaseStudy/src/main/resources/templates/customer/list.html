@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+<a href="/customer/create">Create new blog</a>
+<!--<button type="button" class="btn btn-primary btn-lg" id="btnModalCreate">-->
+<!--    Create new customer-->
+<!--</button>-->
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<form>
+    <input type="text" name="key_search" placeholder="Search by content">
+    <button type="submit">Submit</button>
+</form>
+<!--<form>-->
+<!--    <select th:name="topicId" onchange="this.form.submit()">-->
+<!--        <option selected disabled value="">Choose</option>-->
+<!--        <th:block th:each="topic: ${topicList}">-->
+<!--            <option th:value="${topic.id}" th:text="${topic.topic}"></option>-->
+<!--        </th:block>-->
+<!--    </select>-->
+<!--</form>-->
+<div id="searchTable">
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Customer type id</th>
+            <th>Name</th>
+            <th>Birthday</th>
+            <th>Gender</th>
+            <th>Id card</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Detail</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr th:each="customer: ${customers}">
+            <td scope="col" th:text="${customer.customer_id}"></td>
+            <td scope="col" th:text="${customer.customerType.customer_type_name}"></td>
+            <td scope="col" th:text="${customer.customer_name}"></td>
+            <td scope="col" th:text="${customer.customer_birthday}"></td>
+            <td scope="col" th:text="${customer.customer_gender}"></td>
+            <td scope="col" th:text="${customer.customer_id_card}"></td>
+            <td scope="col" th:text="${customer.customer_phone}"></td>
+            <td scope="col" th:text="${customer.customer_email}"></td>
+            <td scope="col" th:text="${customer.customer_address}"></td>
+            <td><a th:href="@{/customer/detail/__${customer.customer_id}__ }">Detail</a></td>
+            <!--        <td>-->
+            <!--            <button class="btn btn-warning viewModal">View</button>-->
+            <!--            <input hidden th:value="${customer.customer_id}">-->
+            <!--        </td>-->
+            <td><a th:href="@{/customer/edit-customer/__${customer.customer_id}__ }">Edit</a></td>
+            <!--        <td>-->
+            <!--            <button type="button" class="btn btn-danger"-->
+            <!--                    th:onclick="'javascript:showEdit('+ ${customer.customer_id} + ')'">-->
+            <!--                Update-->
+            <!--            </button>-->
+            <!--            <input hidden th:value="${customer.customer_id}">-->
+            <!--        </td>-->
+            <!--        <td><a th:href="@{/blog/delete-blog/__${blog.id}__ }">Delete</a></td>-->
+            <td>
+                <button type="button" class="btn btn-danger" id="btnModalDelete"
+                        th:onclick="'javascript:showDelete('+ ${customer.customer_id} + ')'">
+                    Delete
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <a th:href="@{'/customer/list'(page=${customers.number - 1})}" th:if="${customers.hasPrevious()}">Previous</a>
+    <span th:text="${customers.number+1}"></span>/<span th:text="${customers.totalPages}"></span>
+    <a th:href="@{'/customer/list'(page=${customers.number + 1})}" th:if="${customers.hasNext()}">Next</a>
+</div>
+
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Product Management</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Body
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".viewModal").click(function () {
+            console.log($(this).next().val())
+            $.ajax({
+                type: "GET",
+                url: "/customer/detail/" + $(this).next().val(),
+                dataType: "HTML",
+                success: function (data) {
+                    $(".modal-body").html(data);
+                    $("#modelId").modal("show");
+                }
+            });
+        });
+    });
+
+    function showDelete(customer_id) {
+        $.ajax({
+            type: "GET",
+            url: "/customer/delete-customer/" + customer_id,
+            dataType: "HTML",
+            success: function (data) {
+                $(".modal-body").html(data);
+                $("#modelId").modal("show");
+            }
+        })
+    }
+
+    function actionDelete(customer_id) {
+        $.ajax({
+            type: "POST",
+            url: "/customer/delete-customer/" + customer_id,
+            dataType: "HTML",
+            success: function (data) {
+                setTimeout(function () {
+                    $("#modelId").modal('hide');
+                }, 1000);
+                console.log(data);
+                $("#searchTable").html(data);
+            }
+        })
+    }
+</script>
+
+<!--<script>-->
+<!--    $(document).ready(function () {-->
+<!--        $("#btnModalCreate").click(function () {-->
+<!--            $.ajax({-->
+<!--                type: "GET",-->
+<!--                url: "/customer/create",-->
+<!--                dataType: "HTML",-->
+<!--                success: function (data) {-->
+<!--                    $(".modal-body").html(data);-->
+<!--                    $("#modelId").modal('show');-->
+<!--                }-->
+<!--            });-->
+<!--        });-->
+<!--    });-->
+<!--</script>-->
+
+<!--<script>-->
+<!--    function showEdit(customer_id) {-->
+<!--        $.ajax({-->
+<!--            type: "GET",-->
+<!--            url: "/customer/edit-customer/" + customer_id,-->
+<!--            dataType: "HTML",-->
+<!--            success: function (data) {-->
+<!--                $(".modal-body").html(data);-->
+<!--                $("#modelId").modal('show');-->
+<!--            }-->
+<!--        })-->
+<!--    }-->
+<!--</script>-->
+
+</body>
+</html>

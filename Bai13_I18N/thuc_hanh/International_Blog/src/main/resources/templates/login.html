@@ -5,11 +5,7 @@
 </head>
 <body>
 <h1 th:text="#{login.heading}"></h1>
-<div>
-    <span>Language:</span>
-    <span><a href="?lang=en" th:text="#{English}"></a></span>
-    <span><a href="?lang=ha" th:text="#{Hawaii}"></a></span>
-</div>
+<span>Language: <a href="?lang=en">English</a> | <a href="?lang=ha">Hawaii</a></span>
 <form th:action="@{/login}" th:object="${credential}" method="post">
     <table>
         <tr>

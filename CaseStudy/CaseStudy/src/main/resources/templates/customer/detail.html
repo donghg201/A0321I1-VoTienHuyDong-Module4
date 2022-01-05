@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail customer</title>
+</head>
+<body>
+<form th:object="${customer}">
+    <input th:type="hidden" name="id" th:field="*{customer_id}">
+    <table>
+        <tr>
+            <td>Customer Type:</td>
+            <td th:text="${customer.customerType.getCustomer_type_name()}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td th:text="${customer.customer_name}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Birthday:</td>
+            <td th:text="${customer.customer_birthday}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td th:switch="${customer.customer_gender}">
+                <p th:case="1">Nữ</p>
+                <p th:case="0">Nam</p>
+            </td>
+        </tr>
+        <tr>
+            <td>ID card:</td>
+            <td th:text="${customer.customer_id_card}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Phone number:</td>
+            <td th:text="${customer.customer_phone}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td th:text="${customer.customer_email}"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Address:</td>
+            <td th:text="${customer.customer_address}"/>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
